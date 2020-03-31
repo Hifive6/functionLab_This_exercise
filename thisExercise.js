@@ -5,9 +5,11 @@ let slideshow = {
             if (this.currentPhotoIndex < this.photoList.length) {
                 this.currentPhotoIndex ++;
                 console.log(this.currentPhotoIndex);
-                console.log(this.photoList);
+                console.log(this.photoList[this.currentPhotoIndex]);
+            } else {
+                console.log("End of Slideshow")
             }
     }
 }
 slideshow.nextPhoto()
-console.log(slideshow);
+// console.log(slideshow);
