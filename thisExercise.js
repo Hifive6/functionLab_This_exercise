@@ -26,11 +26,23 @@ let slideshow = {
     },
 
     playInterval: null,
-    play: function(){
-        this.nextPhoto
+    play: function() {
+        let a = this;
+        this.playInterval = setInterval(function(){
+            a.nextPhoto();
+        },2000);
+        console.log(this.playInterval)
+    },
 
+    pause: function() {
+        clearInterval(this.playInterval);
     }
+
 }
+
+// slideshow.nextPhoto();
+// slideshow.prevPhoto();
+slideshow.play();
 
 
 
