@@ -26,23 +26,5 @@ let slideshow = {
     }
 }
 
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
 
-
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-slideshow.getCurrentPhoto();
 
