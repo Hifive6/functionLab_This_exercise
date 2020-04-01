@@ -1,5 +1,7 @@
+
+
 let slideshow = {
-    photoList: ['mountainPic', 'oceanPic', 'desertPic', 'forrestPic', 'snowPic', 'uptownPic',     'cloudyDayPic', 'beachPic', 'sunnyDayPic', 'whiteSandsPic' ],
+    photoList:  ['mountainPic', 'oceanPic', 'desertPic', 'forrestPic', 'snowPic', 'uptownPic','cloudyDayPic', 'beachPic', 'sunnyDayPic', 'whiteSandsPic' ],
     currentPhotoIndex: 0,
         nextPhoto: function() { 
                 if (this.currentPhotoIndex < this.photoList.length - 1) {
