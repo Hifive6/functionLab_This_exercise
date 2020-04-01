@@ -1,10 +1,10 @@
 let slideshow = {
     photoList: ['mountainPic', 'oceanPic', 'desertPic', 'forrestPic'],
-    currentPhotoIndex: 2,
+    currentPhotoIndex: 0,
         nextPhoto: function() { 
                 if (this.currentPhotoIndex < this.photoList.length - 1) {
                     this.currentPhotoIndex ++;
-                    console.log(this.currentPhotoIndex);
+                    // console.log(this.currentPhotoIndex);
                     console.log(this.photoList[this.currentPhotoIndex]);
                 } else {
                     console.log("End of Slideshow")
@@ -21,10 +21,20 @@ let slideshow = {
     },
     getCurrentPhoto: function() {
         if (this.currentPhotoIndex < this.photoList.length) {
-            console.log(this.photoList[this.currentPhotoIndex])
+            return this.photoList[this.currentPhotoIndex];
         }
+    },
+
+    playInterval: null,
+    play: function(){
+        this.nextPhoto
+
     }
 }
+
+
+
+
 
 
 
