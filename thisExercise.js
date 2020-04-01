@@ -1,12 +1,15 @@
+
+
 let slideshow = {
-    photoList: ['mountainPic', 'oceanPic', 'desertPic', 'forrestPic'],
-    currentPhotoIndex: 2,
+    photoList:  ['mountainPic', 'oceanPic', 'desertPic', 'forrestPic', 'snowPic', 'uptownPic','cloudyDayPic', 'beachPic', 'sunnyDayPic', 'whiteSandsPic' ],
+    currentPhotoIndex: 0,
         nextPhoto: function() { 
                 if (this.currentPhotoIndex < this.photoList.length - 1) {
                     this.currentPhotoIndex ++;
-                    console.log(this.currentPhotoIndex);
+                    // console.log(this.currentPhotoIndex);
                     console.log(this.photoList[this.currentPhotoIndex]);
                 } else {
+                    this.pause()
                     console.log("End of Slideshow")
                 }
         },
@@ -21,28 +24,32 @@ let slideshow = {
     },
     getCurrentPhoto: function() {
         if (this.currentPhotoIndex < this.photoList.length) {
-            console.log(this.photoList[this.currentPhotoIndex])
+            return this.photoList[this.currentPhotoIndex];
         }
+    },
+
+    playInterval: null,
+    play: function() {
+        let a = this;
+        this.playInterval = setInterval(function(){
+            a.nextPhoto();
+        },2000);
+        console.log(this.playInterval)
+    },
+
+    pause: function() {
+        clearInterval(this.playInterval);
     }
+
 }
 
 // slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
-// slideshow.nextPhoto();
+// slideshow.prevPhoto();
+slideshow.play();
 
 
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-// slideshow.prevPhoto();
-slideshow.getCurrentPhoto();
+
+
+
+
 
